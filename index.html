@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./Source/Bootstrap/Css/bootstrap.min.css">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./Source/Css/style.css">
+    <title>Booklist Project</title>
+</head>
+<body>
+    <section class="mainBody">
+        <h1 class="title">Pro<span class="ps-2">Book</span>List Project<i class="bi bi-book-half pt-1 ps-2"></i></h1>
+
+        <div class="container-fluid">
+            <div class="inputSection row">
+                <div class="col-11 col-md-10 col-lg-8 col-xl-7 mt-4">
+                    <label class="form-label" for="titleInput">Title</label>
+                    <input id="titleInput" class="titleInput form-control" type="text" maxlength="20">
+                </div>
+                <div class="col-11 col-md-10 col-lg-8 col-xl-7 mt-4">
+                    <label class="form-label" for="authorInput">Author</label>
+                    <input id="authorInput" class="authorInput form-control" type="text" maxlength="20">
+                </div>
+                <div class="col-11 col-md-10 col-lg-8 col-xl-7 mt-4">
+                    <label class="form-label" for="yearInput">Year</label>
+                    <input id="yearInput" class="yearInput form-control" type="text" maxlength="4">
+                </div>
+                <div class="col-11 col-md-10 col-lg-8 col-xl-7 mt-4">
+                    <button class="addBookBtn btn btn-warning w-100">Add</button>
+                </div>
+            </div>
+    
+            <div class="row py-4">
+                <div class="col-11 col-md-10 col-lg-8 col-xl-7 mt-4">
+                    <div class="tip mb-1">Tip : to delete a book info just click on it</div>
+                    <table class="table table-hover">
+                        <thead class="table-head">
+                            <tr>
+                               <th>Title</th>
+                               <th>Author</th>
+                               <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody class="book-list table-body table-warning">
+                            <!-- bookInfo EX :
+                            <tr>
+                               <td>bookTitle</td>
+                               <td>bookAuthor</td>
+                               <td>bookYear</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- this modal fires when clicking on a book info to delete it -->
+    <div class="modalAlert shadow">
+        <p>This action cannot be undone. This will permanently delete the
+        <span class="selesctedBookName"></span> book.</p>
+        <p>are you sure?</p>
+        <div class="btns">
+            <button class="discard btn btn-warning">Discard</button>
+            <button class="delete btn btn-outline-danger ms-2">delete</button>
+        </div>
+    </div>
+
+    <!-- this alert fires when the user doesnt follow the input rules -->
+    <div class="inputValidationAlert">
+        <p><span class="inputName"></span> <span class="alertMassage"></span></p>
+    </div>
+
+    <script src="./Source/Bootstrap/Js/bootstrap.bundle.js"></script>
+    <script src="./Source/Js/script.js"></script>
+</body>
+</html> 
